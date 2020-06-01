@@ -1,0 +1,79 @@
+.container {
+    height: 100%;
+    width: 256px;
+    padding: 50px 0;
+    background: #ccc;
+    flex-shrink: 0;
+    z-index: 1;
+}
+
+.container input[type="color"] {
+    width: 60px;
+    height: 20px;
+    padding: 3px 6px;
+    border: none;
+    border-radius: 5px;
+    background: #818181;
+}
+
+.container .block {
+    margin: 0 0 60px;
+}
+
+.container .block h2 {
+    width: 100%;
+    text-align: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    color: #818181;
+    margin: 0 0 24px;
+}
+  
+/* Side panel — Shapes */
+  
+.container .shapes {
+    display: flex;
+    align-content: space-around;
+    align-items: flex-end;
+    padding: 0 35px;
+}
+  
+.container .shapes > * {
+    margin-right: 25px;
+}
+  
+.container .shapes svg {
+    fill: #EAEAEA;
+    stroke: #818181;
+    stroke-width: 3px;
+}
+  
+/* Side panel — Style — Properites */
+  
+.container .blockStyle .property {
+    display: flex;
+    justify-content: space-between;
+}
+  
+.container .blockStyle .property,
+.container .savingStatus {
+    margin: 0 40px 10px;
+}
+  
+.container .blockStyle .property h3 {
+    display: inline;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #818181;
+    margin: 0 10px 0 0;
+    padding: 3px 0 0;
+}
+
+/* Saving status */
+.container .block.savingStatus {
+    color: #818181;
+}

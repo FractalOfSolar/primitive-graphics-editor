@@ -1,0 +1,18 @@
+.container {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.placed {
+    position: absolute;
+}
+
+.selected {
+    border: 1px blue dashed;
+    margin: -1px;
+}
+
+.container svg.polygon:hover {
+    cursor: pointer;
+}

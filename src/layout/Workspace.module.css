@@ -1,0 +1,15 @@
+.container {
+    position: relative;
+    flex-grow: 1;
+    background: #EFEFEF;
+}
+
+.placedShapeContainer {
+    position: absolute;
+}
+
+.selectionFrame {
+    position: absolute;
+    background: rgba(0, 0, 255, 0.1);
+    border: 1px rgba(0, 0, 255, 0.6) solid;
+}
