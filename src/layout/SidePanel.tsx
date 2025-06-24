@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useAppSelector, useAppDispatch } from '../app/hooks';
 
 import {
     create,
@@ -39,7 +39,7 @@ const SHAPE_VARIANTS: ShapeInterface[] = SHAPE_TYPES.map(type => ({
 
 
 export default function SidePanel() {
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
     const {
         workspaceSize,
         saved,
@@ -47,7 +47,7 @@ export default function SidePanel() {
         selectedObjects,
         lastColor,
         lastBorderColor,
-    } = useSelector(selectWorkspace);
+    } = useAppSelector(selectWorkspace);
     
     return (
         <div className={styles.container}>

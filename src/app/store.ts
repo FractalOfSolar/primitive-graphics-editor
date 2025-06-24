@@ -1,14 +1,17 @@
-import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
+import { configureStore, ThunkAction, Action, combineReducers } from '@reduxjs/toolkit';
 import workspaceReducer from '../layout/Workspace.slice';
 
 
-export const store = configureStore({
-    reducer: {
-        workspace: workspaceReducer,
-    },
+const rootReducer = combineReducers({
+    workspace: workspaceReducer,
 });
 
-export type RootState = ReturnType<typeof store.getState>;
+export const store = configureStore({
+    reducer: rootReducer,
+});
+
+export type RootState = ReturnType<typeof rootReducer>;
+export type AppDispatch = typeof store.dispatch;
 export type AppThunk<ReturnType = void> = ThunkAction<
     ReturnType,
     RootState,

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useAppSelector, useAppDispatch } from '../app/hooks';
 
 import Shape from '../components/Shape';
 
@@ -25,8 +25,8 @@ export default function Workspace() {
         firstCursorPositionOnSelecting,
         objects,
         selectedObjects,
-    } = useSelector(selectWorkspace);
-    const dispatch = useDispatch();
+    } = useAppSelector(selectWorkspace);
+    const dispatch = useAppDispatch();
 
     const workspaceDomElement = useRef<HTMLDivElement>(null);
     const offsetWidth = workspaceDomElement.current?.offsetWidth;
